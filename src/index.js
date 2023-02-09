@@ -1,11 +1,10 @@
 import "./style/style.scss";
+import displayWeather from "./modules/weatherData";
 
-
-const test = function() {
-    let testDiv = document.getElementById("test");
-    let testParagraph = document.createElement("p");
-    testParagraph.innerHTML = "Hello weather app!";
-    testDiv.appendChild(testParagraph);
+const main = function() {
+ 
+    displayWeather();
 }
 
-test();
+
+main();
