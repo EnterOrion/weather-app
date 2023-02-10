@@ -1,3 +1,18 @@
+:root {
+    --cloudy:  url(images/cloudy.jpg);
+    --rainy:  url(images/rainy.jpg);
+    --sunny: url(images/sunny.jpg);
+    --smog: url(images/smog.jpg);
+    --misty: url(images/misty.jpg);
+    --snowy: url(images/snowy.jpg);
+    --thunder: url(images/thunderstorm.jpg);
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
 form {
     margin-bottom: 15px;
 }
@@ -8,3 +23,10 @@ form {
     font-weight: bold;
 }
 
+body {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: var(--cloudy);
+    background-size: cover;
+    background-position: center;
+}

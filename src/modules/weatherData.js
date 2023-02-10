@@ -1,5 +1,6 @@
 const apiKey = "b897024214ad0e85c66721a70404e0f7";
 const form = document.querySelector("form");
+const body = document.querySelector("body");
 let cityQuery = "London";
 
 
@@ -45,10 +46,43 @@ const displayWeather = function(response) {
 
         weatherCity.innerHTML = weather.name;
         weatherConditions.innerHTML = capitalizeConditions;
-        weatherTemp.innerHTML = "Temperature:" + " " + weather.temp;
-        weatherFeelsLike.innerHTML = "Feels like:" + " " + weather.tempLike;
-        weatherHumidity.innerHTML = "Humidity:" + " " + weather.humidity;
-        weatherWind.innerHTML = "Wind speed:" + " " + weather.wind;
+        weatherTemp.innerHTML = "Temperature:" + " " + weather.temp + " " + "C°";
+        weatherFeelsLike.innerHTML = "Feels like:" + " " + weather.tempLike + " " + "C°";
+        weatherHumidity.innerHTML = "Humidity:" + " " + weather.humidity + "%";
+        weatherWind.innerHTML = "Wind speed:" + " " + weather.wind + " " + "km/h";
+
+        let rainExp = /[R-r]ain/;
+        let sunExp = /[S-s]un/;
+        let clearExp = /[C-c]lear/;
+        let thunderExp = /[T-t]hunder/;
+        let snowExp = /[S-s]now/;
+        let drizzleExp = /[D-d]rizzle/;
+        let sleetExp = /[S-s]leet/;
+        let sandExp = /[S-s]and/;
+        let ashExp = /[A-a]sh/;
+
+        if (thunderExp.test(capitalizeConditions) == true) {
+            body.style.backgroundImage = "var(--thunder)";
+        }
+        else if (snowExp.test(capitalizeConditions) == true || sleetExp.test(capitalizeConditions) == true) {
+            body.style.backgroundImage = "var(--snowy)";
+    }
+       else if (rainExp.test(capitalizeConditions) == true || drizzleExp.test(capitalizeConditions) == true) {
+            body.style.backgroundImage = "var(--rainy)";
+       }
+       else if (sunExp.test(capitalizeConditions) == true || clearExp.test(capitalizeConditions) == true) {
+            body.style.backgroundImage = "var(--sunny)";
+       }
+       else if (capitalizeConditions == "Mist" || capitalizeConditions == "Fog") {
+            body.style.backgroundImage = "var(--misty)";
+       }
+       else if (capitalizeConditions == "Smoke" || capitalizeConditions == "Haze" || capitalizeConditions == "Dust" ||
+        sandExp.test(capitalizeConditions) == true || ashExp.test(capitalizeConditions) == true) {
+            body.style.backgroundImage = "var(--smog)";
+        }
+       else {
+            body.style.backgroundImage = "var(--cloudy)";
+       }
 
 }
 
