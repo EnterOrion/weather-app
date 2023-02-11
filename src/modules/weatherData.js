@@ -46,10 +46,10 @@ const displayWeather = function(response) {
 
         weatherCity.innerHTML = weather.name;
         weatherConditions.innerHTML = capitalizeConditions;
-        weatherTemp.innerHTML = "Temperature:" + " " + weather.temp + " " + "C°";
-        weatherFeelsLike.innerHTML = "Feels like:" + " " + weather.tempLike + " " + "C°";
-        weatherHumidity.innerHTML = "Humidity:" + " " + weather.humidity + "%";
-        weatherWind.innerHTML = "Wind speed:" + " " + weather.wind + " " + "km/h";
+        weatherTemp.innerHTML = "<strong>Temperature:</strong>" + " " + weather.temp + " " + "C°";
+        weatherFeelsLike.innerHTML = "<strong>Feels like:</strong>" + " " + weather.tempLike + " " + "C°";
+        weatherHumidity.innerHTML = "<strong>Humidity:</strong>" + " " + weather.humidity + "%";
+        weatherWind.innerHTML = "<strong>Wind speed:</strong>" + " " + weather.wind + " " + "km/h";
 
         let rainExp = /[R-r]ain/;
         let sunExp = /[S-s]un/;
