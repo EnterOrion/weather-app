@@ -15,11 +15,26 @@ form.addEventListener("submit", (e) => {
 
 
 async function requestWeather() { 
+    try {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityQuery}&units=metric&APPID=${apiKey}`, {mode: 'cors'
 });
     const weatherData = await response.json();
     displayWeather(weatherData);
-               
+}
+catch (error) {
+    const weatherError = document.getElementById("name");
+    const conditions = document.getElementById("conditions");
+    const temp = document.getElementById("temp");
+    const tempLike = document.getElementById("tempLike");
+    const humidity = document.getElementById("humidity");
+    const wind = document.getElementById("wind");
+    weatherError.innerHTML = "City not found!";
+    conditions.innerHTML = "N/A";
+    temp.innerHTML = "<strong>Temperature:</strong>" + " " + "N/A";
+    tempLike.innerHTML = "<strong>Feels like:</strong>" + " " + "N/A";
+    humidity.innerHTML = "<strong>Humidity:</strong>" + " " + "N/A";
+    wind.innerHTML = "<strong>Wind speed:</strong>" + " " + "N/A";
+}         
                        
 }
 

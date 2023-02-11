@@ -11,7 +11,9 @@
 body,html {
     margin: 0;
     padding: 0;
+    min-width: 1000px;
 }
+
 
 form {
     margin-top: 13px;
@@ -101,7 +103,7 @@ button {
     width: 32px;
     content: "";
     background-size: cover;
-    margin-right: 2px;
+    margin-right: 4px;
     background-image: url(images/temperature.png);
     vertical-align: middle;
 }
@@ -113,7 +115,7 @@ button {
 #humidity::before {
     display: inline-block;
     height: 32px;
-    margin-right: 2px;
+    margin-right: 4px;
     width: 32px;
     content: "";
     background-size: cover;
@@ -127,7 +129,7 @@ button {
     height: 32px;
     width: 32px;
     content: "";
-    margin-right: 2px;
+    margin-right: 4px;
     background-size: cover;
     background-image: url(images/wind.png);
     vertical-align: middle;
