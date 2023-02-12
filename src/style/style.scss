@@ -150,6 +150,17 @@ body {
     background-position: center;
 }
 
+@media (max-width: 360px) {
+    #weather-display {
+        padding: 10px;
+    
+    }
+    #humidity::before, #wind::before, #temp::before, #tempLike::before {
+        display: block;
+    }
+}
+
+
 @media (max-width: 550px) {
     body {
         display: flex;
@@ -161,7 +172,7 @@ body {
     #weather-display {
         align-self: center;
         margin-left: 0;
-        margin-bottom: 20%;
+        margin-bottom: 50%;
         padding: 15px;
         padding-top: 17px;
         padding-bottom: 17px;
