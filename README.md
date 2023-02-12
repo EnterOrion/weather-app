@@ -9,4 +9,4 @@ search for any city in the world and it will display the weather for today.
 This was built with Webpack, SASS, and vanilla JavaScript. 
 
 ## Live preview
-
+https://enterorion.github.io/weather-app/
