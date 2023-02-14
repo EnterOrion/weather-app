@@ -1,6 +1,7 @@
 const apiKey = "b897024214ad0e85c66721a70404e0f7";
 const form = document.querySelector("form");
 const body = document.querySelector("body");
+const cityName = document.getElementById("cityName");
 
 // Display London as the default city
 let cityQuery = "London";
@@ -27,7 +28,7 @@ async function requestWeather() {
     const tempLike = document.getElementById("tempLike");
     const humidity = document.getElementById("humidity");
     const wind = document.getElementById("wind");
-    
+
     weatherError.innerHTML = "City not found!";
     conditions.innerHTML = "N/A";
     temp.innerHTML = "<strong>Temperature:</strong>" + " " + "N/A";
