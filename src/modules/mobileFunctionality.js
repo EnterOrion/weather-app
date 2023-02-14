@@ -1,10 +1,10 @@
-const search = document.getElementById("cityName");
+const form = document.querySelector("form");
 
 
 const addEvent = () => {
-    search.addEventListener('keyup', (keyboardEvent) => {
-        if (key.keyCode === 13 || keyboardEvent.code === 'Enter') {
-        search.blur();
+    form.addEventListener('keyup', (keyboardEvent) => {
+        if (keyboardEvent.code === 13 || keyboardEvent.code === 'Enter') {
+        form.blur();
     }
     });
 }
