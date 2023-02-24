@@ -41,7 +41,7 @@ form {
   margin-right: 2%;
 }
 
-#cityName {
+#city-name {
   background-color: rgba(56, 56, 56, 0.3);
   border-radius: 0.5rem;
   border: none;
@@ -103,7 +103,7 @@ button {
 }
 
 #temp::before,
-#tempLike::before {
+#temp-like::before {
   @extend %icon-display;
   background-image: url(images/temperature.png);
 }
@@ -125,7 +125,7 @@ button {
   #humidity::before,
   #wind::before,
   #temp::before,
-  #tempLike::before {
+  #temp-like::before {
     display: block;
   }
 }

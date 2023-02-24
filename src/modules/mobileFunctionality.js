@@ -1,4 +1,4 @@
-const search = document.getElementById("cityName");
+const search = document.getElementById("city-name");
 
 // Removes focus on input after user has entered the city
 const addEvent = () => {

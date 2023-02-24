@@ -1,7 +1,7 @@
 const apiKey = "b897024214ad0e85c66721a70404e0f7";
 const form = document.querySelector("form");
 const body = document.querySelector("body");
-const cityName = document.getElementById("cityName");
+const cityName = document.getElementById("city-name");
 
 // Display London as the default city
 let cityQuery = "London";
@@ -25,7 +25,7 @@ async function requestWeather() {
     const weatherError = document.getElementById("name");
     const conditions = document.getElementById("conditions");
     const temp = document.getElementById("temp");
-    const tempLike = document.getElementById("tempLike");
+    const tempLike = document.getElementById("temp-like");
     const humidity = document.getElementById("humidity");
     const wind = document.getElementById("wind");
 
@@ -51,7 +51,7 @@ const displayWeather = function (response) {
   const weatherCity = document.getElementById("name");
   const weatherConditions = document.getElementById("conditions");
   const weatherTemp = document.getElementById("temp");
-  const weatherFeelsLike = document.getElementById("tempLike");
+  const weatherFeelsLike = document.getElementById("temp-like");
   const weatherHumidity = document.getElementById("humidity");
   const weatherWind = document.getElementById("wind");
 
