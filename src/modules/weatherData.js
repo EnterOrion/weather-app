@@ -6,6 +6,7 @@ const cityName = document.getElementById("city-name");
 // Display London as the default city
 let cityQuery = "London";
 
+// Calls the weather api for the inputted city
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   cityQuery = cityName.value;
@@ -29,6 +30,7 @@ async function requestWeather() {
     const humidity = document.getElementById("humidity");
     const wind = document.getElementById("wind");
 
+    // If error: display N/A
     weatherError.innerHTML = "City not found!";
     conditions.innerHTML = "N/A";
     temp.innerHTML = "<strong>Temperature:</strong>" + " " + "N/A";
@@ -38,6 +40,7 @@ async function requestWeather() {
   }
 }
 
+// Display weather based off the data in the API response
 const displayWeather = function (response) {
   const weather = {
     name: response.name,
@@ -55,12 +58,15 @@ const displayWeather = function (response) {
   const weatherHumidity = document.getElementById("humidity");
   const weatherWind = document.getElementById("wind");
 
+  // Capitalize the weather condition
   const capitalizeLetter = weather.conditions[0].toUpperCase();
   let baseConditions = weather.conditions.substr(1);
   const capitalizeConditions = capitalizeLetter + baseConditions;
 
   weatherCity.innerHTML = weather.name;
   weatherConditions.innerHTML = capitalizeConditions;
+
+  // Format each piece of the weather conditions
   weatherTemp.innerHTML =
     "<strong>Temperature:</strong>" + " " + weather.temp + " " + "C°";
   weatherFeelsLike.innerHTML =
